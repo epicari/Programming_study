@@ -8,7 +8,7 @@ dst = sys.argv[2]
 f = open(src)
 old_f = f.read()
 f.close()
-
+ 
 new_f = old_f.replace("\t", " "*4)
 
 f = open(dst, 'w')

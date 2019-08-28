@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -7,5 +8,7 @@ int main () {
 
 cout << "Hello World!";
 
-return -1;
+system("pause");
+
+return 0;
 }

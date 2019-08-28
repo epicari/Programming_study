@@ -1,16 +1,20 @@
-class Cal:
-    def __init__(self, a, b):
-        self.a = a
-        self.b = b
-    def add(self):
-        return self.a + self.b
-    def mul(self):
-        return self.a * self.b
+class Animal():
+    def __init__(self, name, age): #생성자, 객체에 초기값을 설정해야 할 때 사용
+        self.name = name
+        self.age = age
+        
+    def setName(self):
+        return 'Animal name is '+ self.name
+    
+    def setAge(self):
+        return 'Animal age is ' + self.age
 
-a = Cal(3, 4)
-print(a.add())
-print(a.mul())
+if __name__ == "__main__":
 
-b = Cal(5, 5)
-print(b.add())
-print(b.mul())
+    animal = Animal('boby', '5')
+    print(animal.setName())
+    print(animal.setAge())
+
+    cat = Animal('naby', '2')
+    print(cat.setName())
+    print(cat.setAge())

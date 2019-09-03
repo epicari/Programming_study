@@ -1,3 +1,6 @@
+/* 
+* 구조체 테스트
+*/
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -31,7 +34,7 @@ int main () {
         print_prf (profile_l[n]);
     }
 
-    system("pause");
+    system("pause"); // cout이 끝나면 종료되는 것을 막음
     return 0;
 }
 

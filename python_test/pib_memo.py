@@ -4,4 +4,4 @@ def pib_m2(n):
         a, b = b, a + b
     return b
 
-print(pib_m2(5))
+print(pib_m2(7))

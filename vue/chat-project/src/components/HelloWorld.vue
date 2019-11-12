@@ -41,6 +41,7 @@ export default {
       count: 0,
     }
   },
+  // props는 상위 컴포넌트에서 하위 컴포넌트로 데이터를 전달할 때 사용, 상위 APP.vue
   props: {
     msg2: String
   },

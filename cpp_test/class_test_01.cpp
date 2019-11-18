@@ -8,13 +8,25 @@
 
 using namespace std;
 
-class profileClass {
+class proFileClass {
+
+private:
     string name;
-    uint16_t age;
+    int age;
+
+public:
+    proFileClass(string n, int i) { //생성자
+        name = n;
+        age = i;
+    }
+    void printProfile() {
+        cout << "name: " << name << endl;
+        cout << "age: " << age << endl;
+    }
 };
 
-int main() {
-    
+void main() {
+    proFileClass aProfile('CHOI', 30);
+    aProfile.printProfile();
     system("pause");
-    return 0;
 }   

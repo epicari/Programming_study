@@ -20,5 +20,7 @@ int main() {
         cout << "not found in arr" << endl;
     }
 
+    cout << "max element: " << *max_element(begin(arr), end(arr));
+
     return 0;
 }

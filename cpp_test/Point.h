@@ -11,7 +11,8 @@ class Point{
         int x, y;
 
     public:
-    bool InitMembers(int xpos, int ypos);
+    //bool InitMembers(int xpos, int ypos);
+    Point(const int &xpos, const int &ypos); //생성자
     int GetX() const;
     int GetY() const;
     bool SetX(int xpos);

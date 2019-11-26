@@ -7,3 +7,17 @@ if arr[0] == arr[1] or arr[1] == arr[2] or arr[0] == arr[2] == True:
     print('동일한 숫자가 존재함')
 else:
     print('결과: {}'.format(arr[1]))
+
+#
+#
+#
+
+arr = []
+count = 0
+for i in range(3):
+    arr.append(int(input()))
+    if arr[i] == arr[i+1]:
+        count += 1
+
+if count > 1:
+    print('동일한 숫자가 존재함')

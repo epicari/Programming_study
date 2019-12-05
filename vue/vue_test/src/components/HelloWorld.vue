@@ -28,6 +28,9 @@
       <!-- Create a new data from 'now' -->
       <span>{{ new Date() | moment('dddd, MMMM Do YYYY HH:mm:ss') }}</span>
     </ul>
+    <ul>
+      <button v-on:click="reverseMsg">문자열 역순</button>
+    </ul>
   </div>
 </template>
 
@@ -49,8 +52,12 @@ export default {
     say (message) {
       alert(message)
     },
+    reverseMsg: function() {
+      this.msg = this.msg.split('').reverse().join('');
+      return this.msg;
+    }
+  },
 
-  }
 }
 </script>
 

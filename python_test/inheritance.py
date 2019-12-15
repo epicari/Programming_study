@@ -1,6 +1,7 @@
 #
 # HackerRank Tutorials Day 12: Inheritance
 # 
+# 부모클래스 내 함수 사용하고 싶을 때 super() 사용함
 #
 
 class Person:
@@ -24,7 +25,7 @@ class Student(Person):
     # Write your constructor here
 
     def __init__(self, firstName, lastName, idNumber, scores):
-        super().__init__(firstName, lastName, idNumber) #부모클래스 내 함수 사용하고 싶을 때 super() 사용함
+        super().__init__(firstName, lastName, idNumber) 
         self.scores = scores    
 
     #   Function Name: calculate

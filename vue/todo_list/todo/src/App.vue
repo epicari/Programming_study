@@ -2,8 +2,8 @@
     <div id="app">
       <TodoHeader></TodoHeader>
       <TodoInput v-on:addTodo="addTodo"></TodoInput>
-      <TodoFooter v-on:removeAll="clearAll"></TodoFooter>
       <TodoList v-bind:propsdata="todoItems" @removeTodo="removeTodo"></TodoList>
+      <TodoFooter v-on:removeAll="clearAll"></TodoFooter>
     </div>
 </template>
 

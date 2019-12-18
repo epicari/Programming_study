@@ -3,7 +3,7 @@
       <TodoHeader></TodoHeader>
       <TodoInput v-on:addTodo="addTodo"></TodoInput>
       <TodoFooter v-on:removeAll="clearAll"></TodoFooter>
-      <TodoList v-bind:propsdata="todoItems"></TodoList>
+      <TodoList v-bind:propsdata="todoItems" @removeTodo="removeTodo"></TodoList>
     </div>
 </template>
 
@@ -29,7 +29,7 @@ export default {
   },
 
   methods: {
-    addTodo() {
+    addTodo(todoItem) {
       localStorage.setItem(todoItem, todoItem);
       this.todoItems.push(todoItem);
     },
@@ -37,6 +37,17 @@ export default {
       localStorage.clear();
       this.todoItems = [];
     },
+    removeTodo(todoItem, index) {
+      localStorage.removeItem(todoItem);
+      this.todoItems.splice(index, 1);
+    }
+  },
+  created() {
+    if (localStorage.length > 0) {
+      for (var i=0; i < localStorage.length; i++) {
+        this.todoItems.push(localStorage.key(i));
+      }
+    }
   },
 
   components: {

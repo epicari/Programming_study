@@ -1,4 +1,4 @@
-import requests
+import requests, csv
 from bs4 import BeautifulSoup
 
 url = 'https://m.clien.net/service/'
@@ -8,8 +8,14 @@ html = r.content
 soup = BeautifulSoup(html, 'html.parser')
 titles = soup.select('.section_body > div > div > a')
 
-with open('clien.csv', 'w') as file: #csv 파일로 내보내기
-    file.write('title\n')
-    for i in range(len(titles)):
-        #print(i+1, titles[i].text)
-        file.write('{0}\n'.format(titles[i].text))
+with open('clien.csv', 'w', newline='') as csvfile: #csv 파일로 내보내기
+    filednames = ['first_name', 'last_name']
+    writer = csv.DictWriter(csvfile, fieldnames=filednames)
+
+    writer.writeheader()
+    writer.writerow({'first_name': })
+
+
+
+# CSV module이 존재함
+# https://docs.python.org/3/library/csv.html

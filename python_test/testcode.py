@@ -9,4 +9,3 @@ print(s[0])
 
 5 & 7 # AND Operators, unsupported int and float
 
-arr = [1,2,3,4]

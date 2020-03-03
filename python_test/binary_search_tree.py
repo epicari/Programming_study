@@ -7,6 +7,7 @@
 #
 #
 
+from collections import deque
 class Node:
     def __init__(self,data):
         self.right=self.left=None
@@ -27,7 +28,24 @@ class Solution:
 
     def getHeight(self,root):
         #Write your code here
-        return 
+        if root:
+            leftDepth = self.getHeight(root.left) # 계속 내려가면서 값 확인, 실행 된 함수는 스택에 쌓이면서 리턴 기다림
+            rightDepth = self.getHeight(root.right)
+            return max(leftDepth, rightDepth) + 1
+        else:
+            return -1
+
+    def levelOrder(self, root):
+        #Write your code here
+        if root:
+            q = deque([root])
+        # 부모를 queue에 넣고 출력, 이후 부모의 자식들이 존재할 때마다 queue에 삽입, 자식의 자식이 존재하면 queue에 삽입 ...
+        while q:
+            n = q.popleft()
+            print(n.data, end=' ')
+
+            if n.left: q.append(n.left)
+            if n.right: q.append(n.right)
 
 if __name__ == '__main__':
     T=int(input())
@@ -38,3 +56,4 @@ if __name__ == '__main__':
         root=myTree.insert(root,data)
     height=myTree.getHeight(root)
     print(height)       
+    myTree.levelOrder(root)

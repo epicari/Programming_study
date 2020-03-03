@@ -15,7 +15,7 @@ class Solution:
         self.root = root
 
     def insert(self, value):
-        print("insert")
+        #print("insert")
         self.current_node = self.root
 
         while True:
@@ -33,7 +33,7 @@ class Solution:
                     break
     
     def search(self, value):
-        print("search")
+        #print("search")
         self.current_node = self.root
 
         while self.current_node:
@@ -47,7 +47,7 @@ class Solution:
         return False
 
     def delete(self, value):
-        print("delete")
+        #print("delete")
         
         searched = False
         self.current_node = self.root

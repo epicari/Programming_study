@@ -34,7 +34,7 @@ class Solution:
             while node.next:
                 node = node.next
             node.next = Node(data)
-        return node
+        return head
     
     def delete_mk2(self, head, data):
         if head == None:
@@ -54,6 +54,20 @@ class Solution:
                     return
                 else:
                     node = node.next
+        return head
+    
+    def removeDuplicates(self, head):
+        #print('removeDuplicates')
+        current = head
+        while current:
+            if current.next:
+                if current.data == current.next.data:
+                    tmp = current.next
+                    current.next = current.next.next
+                    del tmp
+                    continue # if문이 실행되면 continue 아래 코드는 모두 패스
+            current = current.next #current.next가 존재하지 않으면 while이 멈춤
+        return head
 
 if __name__ == "__main__":
     mylist= Solution()
@@ -62,6 +76,8 @@ if __name__ == "__main__":
     for i in range(T):
         data=int(input())
         head=mylist.insert(head,data)    
-    mylist.display(head) 
-    mylist.delete_mk2(head, 2)
+    #mylist.display(head) 
+    #mylist.delete_mk2(head, 2)
+    #mylist.display(head)
+    mylist.removeDuplicates(head)
     mylist.display(head)

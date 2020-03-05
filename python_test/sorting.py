@@ -38,18 +38,55 @@ class Sort:
                     break
         return self.data
 
-    def quick(self):
-        pass
+    def quick(self, d): # pivot 기준으로 정렬하여 쪼갠 뒤 병합
+        if len(d) <= 1:
+            return d
 
-    def marge(self):
-        pass
+        pivot = d[0]
+
+        left = [item for item in d[1:] if pivot > item]
+        right = [item for item in d[1:] if pivot <= item]
+
+        return self.quick(left) + [pivot] + self.quick(right)
+
+    def merge(self, d): #분할 후 정렬, 마지막에 병합
+        if len(d) <= 1:
+            return d
+
+        m = int(len(d) // 2)
+        left = self.merge(d[:m])
+        right = self.merge(d[m:])
+
+        return self.merge_mgt(left, right)
+
+    def merge_mgt(self, left, right):
+        merged = []
+        leftCount, rightCount = 0, 0
+
+        while len(left) > leftCount and len(right) > rightCount:
+            if left[leftCount] > right[rightCount]:
+                merged.append(right[rightCount])
+                rightCount += 1
+            else:
+                merged.append(left[leftCount])
+                leftCount += 1
+        
+        while len(left) > leftCount:
+            merged.append(left[leftCount])
+            leftCount += 1
+        
+        while len(right) > rightCount:
+            merged.append(right[rightCount])
+            rightCount += 1
+        
+        return merged
 
 if __name__ == '__main__':
     data = random.sample(range(100), 10)
-    print(data)
+    print("RawData: ", data)
     s = Sort(data)
-    print(s.bubble())
-    print(s.select())
-    print(s.insert())
-    
-
+    print("bubble:  ", s.bubble())
+    print("select:  ", s.select())
+    print("insert:  ", s.insert())
+    print("quick:   ", s.quick(data))
+    print("merge:   ", s.merge(data))

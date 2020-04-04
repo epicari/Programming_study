@@ -1,8 +1,7 @@
 #
-#
-# 위상정렬
-# 순서가 정해진 작업
 # 백준 1766
+# 위상정렬(Topological Sort)
+# 순서가 정해진 작업
 #
 
 import heapq

@@ -7,7 +7,8 @@ html = r.content
 
 soup = BeautifulSoup(html, 'html.parser')
 titles = soup.select('div.cont_thumb > strong > a')
-print(titles)
+for i in range(len(titles)):
+    print(titles[i])
 # result = <a class="link txt" href="https address"> title </a>
 # vue로 보면 링크 달린 타이틀로 변환
 

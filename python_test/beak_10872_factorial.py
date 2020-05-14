@@ -1,5 +1,5 @@
 #
-# testcode play by python
+# 백준 10872
 #
 #
 import math

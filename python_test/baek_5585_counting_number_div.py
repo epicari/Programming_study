@@ -1,5 +1,5 @@
 #
-# testcode play by python
+# 백준 5585
 #
 
 arr = [500, 100, 50, 10, 5, 1]

@@ -1,21 +1,15 @@
-import requests, csv
+import requests
 from bs4 import BeautifulSoup
 
-url = 'https://m.clien.net/service/'
+url = 'https://stockplus.com/m/news/latest'
 r = requests.get(url)
 html = r.content
 
 soup = BeautifulSoup(html, 'html.parser')
-titles = soup.select('.section_body > div > div > a')
-
-with open('clien.csv', 'w', newline='') as csvfile: #csv 파일로 내보내기
-    filednames = ['first_name', 'last_name']
-    writer = csv.DictWriter(csvfile, fieldnames=filednames)
-
-    writer.writeheader()
-    writer.writerow({'first_name': })
-
-
-
-# CSV module이 존재함
-# https://docs.python.org/3/library/csv.html
+#titles = soup.select('.section_body > div > div > a')
+#search = soup.select('newsList')
+#titles = search.find_all('a')
+#search = soup.find_all('span')
+link = soup.a
+for parent in link.parents:
+    print(parent.name)

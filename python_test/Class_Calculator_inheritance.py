@@ -1,12 +1,12 @@
 #
-# class_test_calculator 상속
+# Class_Calculator_base 상속
 # 기존의 클래스 함수를 그대로 쓰거나, 추가하거나 기존 기능을 변경할 때
 # 사용
 #
 
-import class_test_calculator
+import Class_Calculator_base as base
 
-class MoreFourCal(class_test_calculator.FourCal):
+class MoreFourCal(base.FourCal):
     def pow(self):
         result = self.first ** self.second
         return result

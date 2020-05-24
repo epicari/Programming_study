@@ -1,12 +1,12 @@
 #
-# class_test_calculator 오버라이딩
+# Class_Calculator_base 오버라이딩
 # 기존의 클래스 함수 내용을 재정의 할 때 사용
 # 
 #
 
-import class_test_calculator
+import Class_Calculator_base as base
 
-class MoreFourCal(class_test_calculator.FourCal):
+class MoreFourCal(base.FourCal):
     def div(self):
         if self.first == 0 or self.second == 0: return 0
         else: 

@@ -1,6 +1,6 @@
 #
-# testcode play by python
-#
+# union find 
+# 원소들의 연결 여부를 파악
 #
 
 def find(x):

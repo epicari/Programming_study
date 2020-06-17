@@ -1,14 +1,19 @@
 import requests
 from bs4 import BeautifulSoup
 
-url = 'https://news.daum.net/breakingnews/digital'
+url = 'https://news.naver.com/main/list.nhn?mode=LSD&mid=sec&sid1=105'
 r = requests.get(url)
 html = r.content
 
 soup = BeautifulSoup(html, 'html.parser')
-titles = soup.select('div.cont_thumb > strong > a')
-for i in range(len(titles)):
-    print(titles[i])
-# result = <a class="link txt" href="https address"> title </a>
-# vue로 보면 링크 달린 타이틀로 변환
+#titles = soup.find("div", {"class": "nclicks(fls.list)"})
+ul = soup.find('ul', {'class': 'type06_headline'})
+lis = ul.find_all('li')
 
+for item in lis:
+    title = item.find('img')['alt']
+    #link = item.find('a')['href']
+
+    #text_list = [title, link]
+
+#print(text_list)

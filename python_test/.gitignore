@@ -1,6 +1,5 @@
 Untitled Folder
 .ipynb_checkpoints
-clien.csv
-a.txt
-b.txt
 __pycache__
+*.json
+*.txt

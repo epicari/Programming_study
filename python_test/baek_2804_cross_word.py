@@ -19,4 +19,4 @@ for i in range(len(b)):
         break
 
 for i in arr:
-    print(*i, sep = '') # i가 아닌, *i를 하면 str로 나옴
+    print(*i, sep = '') #*iterable 반복가능(iterable)한 자료형 나열

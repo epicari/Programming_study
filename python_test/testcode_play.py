@@ -1,4 +1,0 @@
-#
-# testcode play by python
-#
-#

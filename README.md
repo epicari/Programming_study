@@ -6,6 +6,9 @@
 
 ### 참고
 
-- [HackerRank] (https://www.hackerrank.com/dashboard)
-- [백준] (https://www.acmicpc.net/)
+- [HackerRank]: https://www.hackerrank.com
+
+- [백준]: https://www.acmicpc.net/
+
+  
 

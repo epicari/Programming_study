@@ -6,5 +6,5 @@
 
 ### 참고
 
-<a href='https://www.hackerrank.com'>HackerRank</a>
-<a href='https://www.acmicpc.net/'>백준</a>
+- <a href='https://www.hackerrank.com'>HackerRank</a>
+- <a href='https://www.acmicpc.net/'>백준</a>
